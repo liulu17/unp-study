@@ -1,0 +1,318 @@
+## This file contains all the build statements describing the
+# compilation DAG.
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# 
+# Which is the root file.
+# =============================================================================
+
+# =============================================================================
+# Project: test
+# Configurations: Debug
+# =============================================================================
+
+#############################################
+# Minimal version of Ninja required by this file
+
+ninja_required_version = 1.5
+
+
+#############################################
+# Set configuration variable for custom commands.
+
+CONFIGURATION = Debug
+# =============================================================================
+# Include auxiliary files.
+
+
+#############################################
+# Include rules file.
+
+include CMakeFiles/rules.ninja
+
+# =============================================================================
+
+#############################################
+# Logical path to working directory; prefix for absolute paths.
+
+cmake_ninja_workdir = /Users/apple/pros/clion/untitled1/cmake-build-debug/
+# =============================================================================
+# Object build statements for EXECUTABLE target server
+
+
+#############################################
+# Order-only phony target for server
+
+build cmake_object_order_depends_target_server: phony || CMakeFiles/server.dir
+
+build CMakeFiles/server.dir/server.c.o: C_COMPILER__server_Debug /Users/apple/pros/clion/untitled1/server.c || cmake_object_order_depends_target_server
+  DEP_FILE = CMakeFiles/server.dir/server.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -mmacosx-version-min=12.4
+  OBJECT_DIR = CMakeFiles/server.dir
+  OBJECT_FILE_DIR = CMakeFiles/server.dir
+
+build CMakeFiles/server.dir/wrapper.c.o: C_COMPILER__server_Debug /Users/apple/pros/clion/untitled1/wrapper.c || cmake_object_order_depends_target_server
+  DEP_FILE = CMakeFiles/server.dir/wrapper.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -mmacosx-version-min=12.4
+  OBJECT_DIR = CMakeFiles/server.dir
+  OBJECT_FILE_DIR = CMakeFiles/server.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target server
+
+
+#############################################
+# Link the executable server
+
+build server: C_EXECUTABLE_LINKER__server_Debug CMakeFiles/server.dir/server.c.o CMakeFiles/server.dir/wrapper.c.o
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -mmacosx-version-min=12.4
+  OBJECT_DIR = CMakeFiles/server.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = server
+  TARGET_PDB = server.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target client
+
+
+#############################################
+# Order-only phony target for client
+
+build cmake_object_order_depends_target_client: phony || CMakeFiles/client.dir
+
+build CMakeFiles/client.dir/client.c.o: C_COMPILER__client_Debug /Users/apple/pros/clion/untitled1/client.c || cmake_object_order_depends_target_client
+  DEP_FILE = CMakeFiles/client.dir/client.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -mmacosx-version-min=12.4
+  OBJECT_DIR = CMakeFiles/client.dir
+  OBJECT_FILE_DIR = CMakeFiles/client.dir
+
+build CMakeFiles/client.dir/wrapper.c.o: C_COMPILER__client_Debug /Users/apple/pros/clion/untitled1/wrapper.c || cmake_object_order_depends_target_client
+  DEP_FILE = CMakeFiles/client.dir/wrapper.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -mmacosx-version-min=12.4
+  OBJECT_DIR = CMakeFiles/client.dir
+  OBJECT_FILE_DIR = CMakeFiles/client.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target client
+
+
+#############################################
+# Link the executable client
+
+build client: C_EXECUTABLE_LINKER__client_Debug CMakeFiles/client.dir/client.c.o CMakeFiles/client.dir/wrapper.c.o
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -mmacosx-version-min=12.4
+  OBJECT_DIR = CMakeFiles/client.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = client
+  TARGET_PDB = client.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target test
+
+
+#############################################
+# Order-only phony target for test
+
+build cmake_object_order_depends_target_test: phony || CMakeFiles/test.dir
+
+build CMakeFiles/test.dir/test.c.o: C_COMPILER__test_Debug /Users/apple/pros/clion/untitled1/test.c || cmake_object_order_depends_target_test
+  DEP_FILE = CMakeFiles/test.dir/test.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -mmacosx-version-min=12.4
+  OBJECT_DIR = CMakeFiles/test.dir
+  OBJECT_FILE_DIR = CMakeFiles/test.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target test
+
+
+#############################################
+# Link the executable test
+
+build test: C_EXECUTABLE_LINKER__test_Debug CMakeFiles/test.dir/test.c.o
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -mmacosx-version-min=12.4
+  OBJECT_DIR = CMakeFiles/test.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = test
+  TARGET_PDB = test.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target print_env
+
+
+#############################################
+# Order-only phony target for print_env
+
+build cmake_object_order_depends_target_print_env: phony || CMakeFiles/print_env.dir
+
+build CMakeFiles/print_env.dir/print_env.c.o: C_COMPILER__print_env_Debug /Users/apple/pros/clion/untitled1/print_env.c || cmake_object_order_depends_target_print_env
+  DEP_FILE = CMakeFiles/print_env.dir/print_env.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -mmacosx-version-min=12.4
+  OBJECT_DIR = CMakeFiles/print_env.dir
+  OBJECT_FILE_DIR = CMakeFiles/print_env.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target print_env
+
+
+#############################################
+# Link the executable print_env
+
+build print_env: C_EXECUTABLE_LINKER__print_env_Debug CMakeFiles/print_env.dir/print_env.c.o
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -mmacosx-version-min=12.4
+  OBJECT_DIR = CMakeFiles/print_env.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = print_env
+  TARGET_PDB = print_env.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target echo_server
+
+
+#############################################
+# Order-only phony target for echo_server
+
+build cmake_object_order_depends_target_echo_server: phony || CMakeFiles/echo_server.dir
+
+build CMakeFiles/echo_server.dir/echo_server.c.o: C_COMPILER__echo_server_Debug /Users/apple/pros/clion/untitled1/echo_server.c || cmake_object_order_depends_target_echo_server
+  DEP_FILE = CMakeFiles/echo_server.dir/echo_server.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -mmacosx-version-min=12.4
+  OBJECT_DIR = CMakeFiles/echo_server.dir
+  OBJECT_FILE_DIR = CMakeFiles/echo_server.dir
+
+build CMakeFiles/echo_server.dir/wrapper.c.o: C_COMPILER__echo_server_Debug /Users/apple/pros/clion/untitled1/wrapper.c || cmake_object_order_depends_target_echo_server
+  DEP_FILE = CMakeFiles/echo_server.dir/wrapper.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -mmacosx-version-min=12.4
+  OBJECT_DIR = CMakeFiles/echo_server.dir
+  OBJECT_FILE_DIR = CMakeFiles/echo_server.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target echo_server
+
+
+#############################################
+# Link the executable echo_server
+
+build echo_server: C_EXECUTABLE_LINKER__echo_server_Debug CMakeFiles/echo_server.dir/echo_server.c.o CMakeFiles/echo_server.dir/wrapper.c.o
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -mmacosx-version-min=12.4
+  OBJECT_DIR = CMakeFiles/echo_server.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = echo_server
+  TARGET_PDB = echo_server.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target echo_client
+
+
+#############################################
+# Order-only phony target for echo_client
+
+build cmake_object_order_depends_target_echo_client: phony || CMakeFiles/echo_client.dir
+
+build CMakeFiles/echo_client.dir/echo_client.c.o: C_COMPILER__echo_client_Debug /Users/apple/pros/clion/untitled1/echo_client.c || cmake_object_order_depends_target_echo_client
+  DEP_FILE = CMakeFiles/echo_client.dir/echo_client.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -mmacosx-version-min=12.4
+  OBJECT_DIR = CMakeFiles/echo_client.dir
+  OBJECT_FILE_DIR = CMakeFiles/echo_client.dir
+
+build CMakeFiles/echo_client.dir/wrapper.c.o: C_COMPILER__echo_client_Debug /Users/apple/pros/clion/untitled1/wrapper.c || cmake_object_order_depends_target_echo_client
+  DEP_FILE = CMakeFiles/echo_client.dir/wrapper.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -mmacosx-version-min=12.4
+  OBJECT_DIR = CMakeFiles/echo_client.dir
+  OBJECT_FILE_DIR = CMakeFiles/echo_client.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target echo_client
+
+
+#############################################
+# Link the executable echo_client
+
+build echo_client: C_EXECUTABLE_LINKER__echo_client_Debug CMakeFiles/echo_client.dir/echo_client.c.o CMakeFiles/echo_client.dir/wrapper.c.o
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -mmacosx-version-min=12.4
+  OBJECT_DIR = CMakeFiles/echo_client.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = echo_client
+  TARGET_PDB = echo_client.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/apple/pros/clion/untitled1/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build edit_cache: phony CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/apple/pros/clion/untitled1/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/apple/pros/clion/untitled1 -B/Users/apple/pros/clion/untitled1/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build rebuild_cache: phony CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Target aliases.
+
+# =============================================================================
+# Folder targets.
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/apple/pros/clion/untitled1/cmake-build-debug
+
+build all: phony server client test print_env echo_server echo_client
+
+# =============================================================================
+# Built-in targets
+
+
+#############################################
+# Re-run CMake if any of its inputs changed.
+
+build build.ninja: RERUN_CMAKE | ../CMakeLists.txt /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake
+  pool = console
+
+
+#############################################
+# A missing CMake input file is not an error.
+
+build ../CMakeLists.txt /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake: phony
+
+
+#############################################
+# Clean all the built files.
+
+build clean: CLEAN
+
+
+#############################################
+# Print all primary targets available.
+
+build help: HELP
+
+
+#############################################
+# Make the all target the default.
+
+default all

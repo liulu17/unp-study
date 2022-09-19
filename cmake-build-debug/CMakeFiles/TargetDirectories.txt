@@ -1,0 +1,8 @@
+/Users/apple/pros/clion/untitled1/cmake-build-debug/CMakeFiles/server.dir
+/Users/apple/pros/clion/untitled1/cmake-build-debug/CMakeFiles/client.dir
+/Users/apple/pros/clion/untitled1/cmake-build-debug/CMakeFiles/test.dir
+/Users/apple/pros/clion/untitled1/cmake-build-debug/CMakeFiles/print_env.dir
+/Users/apple/pros/clion/untitled1/cmake-build-debug/CMakeFiles/echo_server.dir
+/Users/apple/pros/clion/untitled1/cmake-build-debug/CMakeFiles/echo_client.dir
+/Users/apple/pros/clion/untitled1/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/apple/pros/clion/untitled1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
